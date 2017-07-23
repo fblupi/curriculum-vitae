@@ -33,7 +33,7 @@
 \social[linkedin]{fblupi}
 \social[twitter]{fblupi}
 \extrainfo{12 September 1994}
-\photo[64pt][0.4pt]{photo}
+\photo[64pt][0.4pt]{photo.jpeg}
 %\quote{Alguna cita (opcional)}
 
 % para mostrar etiquetas numericas en la bibliografia (por omision no se muestran etiquetas), solo es util si desea incluir citas en en CV
@@ -43,7 +43,6 @@
 
 % bibliografia con varias fuentes
 \usepackage{multibib}
-\newcites{book,misc}{{Books},{Papers}}
 %----------------------------------------------------------------------------------
 %            contenido
 %----------------------------------------------------------------------------------
@@ -57,7 +56,8 @@
 \cventry{2010--2012}{High School}{Juan XXIII - Chana}{Granada}{\textit{9.32}}{Science and Technology. Best academic results of the year.}
 
 \section{Experience}
-\cventry{2016--}{Scholarship Assistant}{Department of Lenguajes y Sistemas Informáticos}{Granada}{}{
+\cventry{2017--}{Internship Student}{Nazaríes IT}{Granada}{}{Internship in Nazaríes IT corresponding to M.Sc. in Computer Engineering.}
+\cventry{2016-2017}{Scholarship Assistant}{Department of Lenguajes y Sistemas Informáticos}{Granada}{}{
 Working in an investigation project, for studying and devoloping algorithms to view and document wood sculptures, and in Atalaya3D project, processing 3D models to be uploaded to the web.}
 
 \section{Languages}
@@ -70,8 +70,8 @@ Working in an investigation project, for studying and devoloping algorithms to v
 %\cvdoubleitem{Cloud Computing}{Ansible, Vagrant, Docker, AWS}{Otros}{}
 
 \section{Knowledge}
-\cvitem{Web development}{Symfony, Flask, Django, Bootstrap}
-\cvitem{Database}{MongoDB, MySQL, OracleSQL}
+\cvitem{Web development}{Ruby on Rails, Django, Bootstrap}
+\cvitem{Database}{MongoDB, MySQL}
 \cvitem{Mobile applications}{Android}
 \cvitem{Computer Graphics}{OpenGL, WebGL, Blender, Java3D, Three.js, X3D, VTK, ITK}
 \cvitem{Cloud Computing}{Ansible, Vagrant, Docker, AWS}
@@ -92,18 +92,16 @@ Working in an investigation project, for studying and devoloping algorithms to v
 
 % Las publicaciones tomadas de un archivo de BibTeX sin usar multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
 
-\nocite{*}
+%\nocite{*}
 %\bibliographystyle{plain}
 %\bibliography{publications}                   % 'publications' es el nombre del archivo BibTeX
 
 % Las publicaciones tomadas de un archivo BibTeX usando el paquete multibib
 \section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}              % 'publications' es el nombre del archivo BibTeX
-\nocitemisc{ceig.20161311}
-\bibliographystylemisc{plain}
-\bibliographymisc{publications}              % 'publications' es el nombre del archivo BibTeX
+\renewcommand{\refname}{Papers}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}              % 'publications' es el nombre del archivo BibTeX
 
 \section{Miscellaneous}
 \cvlistitem{Driving License B}

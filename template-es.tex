@@ -33,7 +33,7 @@
 \social[linkedin]{fblupi}
 \social[twitter]{fblupi}
 \extrainfo{12 Septiembre 1994}
-\photo[64pt][0.4pt]{photo}
+\photo[64pt][0.4pt]{photo.jpeg}
 %\quote{Alguna cita (opcional)}
 
 % para mostrar etiquetas numericas en la bibliografia (por omision no se muestran etiquetas), solo es util si desea incluir citas en en CV
@@ -42,8 +42,7 @@
 %\makeatother
 
 % bibliografia con varias fuentes
-\usepackage{multibib}
-\newcites{book,misc}{{Libros},{Artículos}}
+\usepackage[resetlabels]{multibib}
 %----------------------------------------------------------------------------------
 %            contenido
 %----------------------------------------------------------------------------------
@@ -57,7 +56,8 @@
 \cventry{2010--2012}{Bachillerato}{Juan XXIII - Chana}{Granada}{\textit{9,32}}{Ciencias y tecnología. Matrícula de honor con mejor nota media de la promoción.}
 
 \section{Experiencia}
-\cventry{2016--}{Becario de colaboración}{Departamento de Lenguajes y Sistemas Informáticos}{Granada}{}{Trabajando tanto en un proyecto de investigación encaminado al estudio y desarrollo de algoritmos para la visualización y documentación de esculturas de madera así como en el proyecto Atalaya3D procesando modelos de figuras 3D para su publicación en la web.}
+\cventry{2017--}{Estudiante de Prácticas}{Nazaríes IT}{Granada}{}{Prácticas de empresa correspondientes al máster en Ingeniería Informática en Nazaríes IT.}
+\cventry{2016-2017}{Becario de colaboración}{Departamento de Lenguajes y Sistemas Informáticos}{Granada}{}{Trabajando tanto en un proyecto de investigación encaminado al estudio y desarrollo de algoritmos para la visualización y documentación de esculturas de madera así como en el proyecto Atalaya3D procesando modelos de figuras 3D para su publicación en la web.}
 
 \section{Idiomas}
 \cvitemwithcomment{Español}{Competencia bilingüe o nativa}{}
@@ -69,8 +69,8 @@
 %\cvdoubleitem{Cloud Computing}{Ansible, Vagrant, Docker, AWS}{Otros}{}
 
 \section{Conocimientos}
-\cvitem{Desarrollo web}{Symfony, Flask, Django, Bootstrap}
-\cvitem{Bases de datos}{MongoDB, MySQL, OracleSQL}
+\cvitem{Desarrollo web}{Ruby on Rails, Django, Bootstrap}
+\cvitem{Bases de datos}{MongoDB, MySQL}
 \cvitem{Dispositivos móviles}{Android}
 \cvitem{Informática gráfica}{OpenGL, WebGL, Blender, Java3D, Three.js, X3D, VTK, ITK}
 \cvitem{Cloud Computing}{Ansible, Vagrant, Docker, AWS}
@@ -91,18 +91,16 @@
 
 % Las publicaciones tomadas de un archivo de BibTeX sin usar multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
 
-\nocite{*}
+%\nocite{*}
 %\bibliographystyle{plain}
 %\bibliography{publications}                   % 'publications' es el nombre del archivo BibTeX
 
 % Las publicaciones tomadas de un archivo BibTeX usando el paquete multibib
 \section{Publicaciones}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}              % 'publications' es el nombre del archivo BibTeX
-\nocitemisc{ceig.20161311}
-\bibliographystylemisc{plain}
-\bibliographymisc{publications}              % 'publications' es el nombre del archivo BibTeX
+\renewcommand{\refname}{Artículos}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}              % 'publications' es el nombre del archivo BibTeX
 
 \section{Otra información}
 \cvlistitem{Permiso de circulación tipo B}
