@@ -5,24 +5,17 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-\documentclass[11pt,a4paper,sans]{moderncv}  % opciones posibles incluyen tamaño de fuente ('10pt', '11pt' and '12pt'), tamaño de papel ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' y 'landscape') y familia de fuentes ('sans' y 'roman')
+\documentclass[11pt,a4paper,sans]{moderncv} % font ('10pt', '11pt' or '12pt'), size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' y 'landscape') and font family ('sans' or 'roman')
+\moderncvstyle{casual} % 'casual', 'classic', 'oldstyle' or 'banking'
+\moderncvcolor{blue} % 'blue', 'orange', 'green', 'red', 'purple', 'grey' or 'black'
+\renewcommand{\familydefault}{\sfdefault} % '\sfdefault' or '\rmdefault'
+\nopagenumbers{}
 
-% temas de moderncv
-\moderncvstyle{casual}                       % las opciones de estilo son 'casual' (por omision),'classic', 'oldstyle' y 'banking'
-\moderncvcolor{blue}                         % opciones de color 'blue', 'orange', 'green', 'red', 'purple', 'grey' y 'black'
-\renewcommand{\familydefault}{\sfdefault}    % para seleccionar la fuente por omision, use '\sfdefault' para la fuente sans serif, '\rmdefault' para la fuente roman, o cualquier nombre de fuente
-\nopagenumbers{}                             % elimine el comentario para suprimir la numeracion automatica de las paginas para CVs mayores a una pagina
+\usepackage[utf8]{inputenc}
 
-% codificacion de caracteres
-\usepackage[utf8]{inputenc}                  % reemplace con su codificacion
-%\usepackage{CJKutf8}                        % si necesita usa CJK para redactar su CV en chino, japones o coreano
-
-% ajustes para los margenes de pagina
 \usepackage[scale=0.75]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}           % si desea cambiar el ancho de la columna para las fechas
 \renewcommand*{\namefont}{\fontsize{42}{42}\mdseries\upshape}
 
-% datos personales
 \name{Francisco Javier}{Bolívar Lupiáñez}
 \title{Ingeniero Informático}
 \address{Carretera de Málaga, 119, 4ºC}{18015, Granada (España)}
@@ -34,20 +27,11 @@
 \social[twitter]{fblupi}
 \extrainfo{12 Septiembre 1994}
 \photo[64pt][0.4pt]{photo.jpeg}
-%\quote{Alguna cita (opcional)}
-
-% para mostrar etiquetas numericas en la bibliografia (por omision no se muestran etiquetas), solo es util si desea incluir citas en en CV
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-
-% bibliografia con varias fuentes
 \usepackage[resetlabels]{multibib}
 %----------------------------------------------------------------------------------
 %            contenido
 %----------------------------------------------------------------------------------
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                     % para redactar el CV en chino usando CJK
 \maketitle
 
 \section{Formación académica}
@@ -56,7 +40,7 @@
 \cventry{2010--2012}{Bachillerato}{Juan XXIII - Chana}{Granada}{\textit{9,32}}{Ciencias y tecnología. Premio al mejor expediente académico de la promoción.}
 
 \section{Experiencia}
-\cventry{2017--}{Desarrollador}{Nazaríes IT}{Granada}{}{Desarrollador en diversos proyectos con clientes tanto nacionales como internacionales. Trabajando con múltiples tecnologías pero principalmente con Ruby on Rails.}
+\cventry{2017--}{Desarrollador Full-Stack}{Nazaríes IT}{Granada}{}{Desarrollador en diversos proyectos con clientes tanto nacionales como internacionales. Trabajando con múltiples tecnologías pero principalmente con Ruby on Rails.}
 \cventry{2017}{Estudiante de Prácticas}{Nazaríes IT}{Granada}{}{Prácticas de empresa correspondientes al máster en Ingeniería Informática en Nazaríes IT.}
 \cventry{2016--2017}{Becario de colaboración}{Departamento de Lenguajes y Sistemas Informáticos}{Granada}{}{Trabajando tanto en un proyecto de investigación encaminado al estudio y desarrollo de algoritmos para la visualización y documentación de esculturas de madera así como en el proyecto Atalaya3D procesando modelos de figuras 3D para su publicación en la web.}
 
@@ -64,50 +48,22 @@
 \cvitemwithcomment{Español}{Competencia bilingüe o nativa}{}
 \cvitemwithcomment{Inglés}{Competencia básica profesional}{B1 English Certificate. University of Cambridge}
 
-%\section{Conocimientos}
-%\cvdoubleitem{Aplicaciones web}{Symfony, Flask, Django, Bootstrap}{Bases de datos}{MongoDB, MySQL, OracleSQL}
-%\cvdoubleitem{Dispositivos móviles}{Android}{Informática gráfica}{OpenGL, WebGL, Java3D, Three.js, X3D, VTK, ITK}
-%\cvdoubleitem{Cloud Computing}{Ansible, Vagrant, Docker, AWS}{Otros}{}
-
 \section{Conocimientos}
-\cvitem{Desarrollo web}{Ruby on Rails, Django, Bootstrap}
-\cvitem{Bases de datos}{MongoDB, MySQL}
-\cvitem{Dispositivos móviles}{Android, Ionic (Angular)}
-\cvitem{Informática gráfica}{OpenGL, WebGL, Blender, Java3D, Three.js, X3D, VTK, ITK, OpenCV}
-\cvitem{Cloud Computing}{Ansible, Vagrant, Docker, AWS}
+\cvitem{Back-end web development}{Ruby on Rails, Django, PHP, MySQL, PostgreSQL, MongoDB}
+\cvitem{Front-end web development}{Angular, Ionic, jQuery}
+\cvitem{DevOps}{Docker, AWS}
+\cvitem{Informática gráfica}{OpenGL, Blender, VTK, ITK, OpenCV}
 \cvitem{Inteligencia artificial}{Redes neuronales, algoritmos evolutivos}
-\cvitem{Otros}{Git, Scrum, UML, CUDA,  Qt}
+\cvitem{Otros}{Git, Scrum, UML, CUDA,  Qt, Photoshop}
 
-%\section{Extra 1}
-%\cvlistitem{Tema 1}
-%\cvlistitem{Tema 2}
-%\cvlistitem{Tema 3}
-
-%\renewcommand{\listitemsymbol}{-~}            % para cambiar el simbolo para las listas
-
-%\section{Extra 2}
-%\cvlistdoubleitem{Tema 1}{Tema 4}
-%\cvlistdoubleitem{Tema 2}{Tema 5\cite{book1}}
-%\cvlistdoubleitem{Tema 3}{}
-
-% Las publicaciones tomadas de un archivo de BibTeX sin usar multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-
-%\nocite{*}
-%\bibliographystyle{plain}
-%\bibliography{publications}                   % 'publications' es el nombre del archivo BibTeX
-
-% Las publicaciones tomadas de un archivo BibTeX usando el paquete multibib
 \section{Publicaciones}
 \renewcommand{\refname}{Artículos}
 \nocite{*}
 \bibliographystyle{plain}
-\bibliography{publications}              % 'publications' es el nombre del archivo BibTeX
+\bibliography{publications}
 
 \section{Otra información}
 \cvlistitem{Permiso de circulación tipo B}
 
-%\clearpage\end{CJK*}                          % si esta redactando su CV en chino usando CJK, \clearpage es requerido por fancyhdr para que funcione correctamente con CJK, aunque esto eliminara la numeracion de pagina al dejar \lastpage como no definido
 \end{document}
 
-
-%% fin del archivo `template-es.tex'.
