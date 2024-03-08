@@ -5,16 +5,19 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-\documentclass[11pt,a4paper,sans]{moderncv} % font ('10pt', '11pt' or '12pt'), size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' y 'landscape') and font family ('sans' or 'roman')
-\moderncvstyle{casual} % 'casual', 'classic', 'oldstyle' or 'banking'
-\moderncvcolor{blue} % 'blue', 'orange', 'green', 'red', 'purple', 'grey' or 'black'
-\renewcommand{\familydefault}{\sfdefault} % '\sfdefault' or '\rmdefault'
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{casual}
+\moderncvcolor{blue}
+\setlength{\footskip}{55pt}
 \nopagenumbers{}
+\hbadness=10000
 
 \usepackage[utf8]{inputenc}
-
+\usepackage{multibib}
 \usepackage[scale=0.75]{geometry}
-\renewcommand*{\namefont}{\fontsize{42}{42}\mdseries\upshape}
+
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand*{\namefont}{\fontsize{25}{25}\mdseries\upshape}
 
 \name{Francisco Javier}{Bolívar Lupiáñez}
 \title{M.Sc. in Computer Science}
@@ -25,44 +28,54 @@
 \social[linkedin]{fblupi}
 \social[twitter]{fblupi}
 \extrainfo{12 September 1994}
-\photo[64pt][0.4pt]{photo.jpeg}
-\usepackage{multibib}
+\photo[64pt]{photo.jpeg}
 
 \begin{document}
 \maketitle
 
 \section{Education}
-\cventry{2016--2018}{M.Sc. in Computer Science}{Universidad de Granada}{Granada}{\textit{9.364}}{Best academic results award.}
-\cventry{2012--2016}{B.Sc. in Computer Science}{Universidad de Granada}{Granada}{\textit{8.378}}{Special mention in Software Engineering. I was graded with honours in 9 courses, including the End-of-Degree Project.}
-\cventry{2010--2012}{High School}{Juan XXIII - Chana}{Granada}{\textit{9.32}}{Science and Technology. Best academic results award.}
+\cventry{2016--2018}{M.Sc. in Computer Science}{Universidad de Granada}{Granada}{\textit{9.364}}{Best academic results
+award.}
+\cventry{2012--2016}{B.Sc. in Computer Science}{Universidad de Granada}{Granada}{\textit{8.378}}{Special mention in
+Software Engineering. I was graded with honours in 9 courses, including the End-of-Degree Project.}
 
 \section{Experience}
-\cventry{2017--}{Full-Stack Developer}{Nazaríes IT}{Granada}{}{Starting as a junior, after a successful stage during my internship, I developed myself until being considered a senior and one of the key pieces in the team. Developer in several projects with both national and international clients. Although the main project I've been working is an IoT environment with a tech stack based on Ruby on Rails, I've also been working in between on other projects with Ruby on Rails and other diverse technologies: such as a desktop application with C++ to control UAVs, a pure back-end project with Spring, various hybrid mobile applications using Ionic, a customized e-commerce platform with PHP or an important telemedicine platform with PHP too.}
-\cventry{2017}{Internship Student}{Nazaríes IT}{Granada}{}{Internship in Nazaríes IT corresponding to M.Sc. in Computer Science. I started learning and working with Ruby on Rails.}
-\cventry{2016-2017}{Scholarship Assistant}{Department of Lenguajes y Sistemas Informáticos}{Granada}{}{
-Working in an investigation project, for studying and devoloping algorithms to view and document wood sculptures, and in Atalaya3D project, processing 3D models to be uploaded to the web.}
+\cventry{2021--}{Technical Lead}{nazaríes intelligenia}{Granada}{}{I combine my role as a developer in more complex
+projects with a managerial role. I'm currently working on a Ruby on Rails open-source platform for citizen participation
+implemented by many public organizations. I'm also the main responsible for the Software Department in the IoT platform,
+so I manage a small team and I take care of every solution we develop is taking us in the right direction.}
+\cventry{2017-2021}{Software Engineer}{nazaríes intelligenia}{Granada}{}{Starting as a junior, after a successful stage
+during my internship, I developed myself until being considered a senior and one of the key pieces in the team. I have
+been a developer on several projects with both national and international clients. Although the main project I've been
+working on is an IoT platform with a tech stack based on Ruby on Rails, I've also been working on other projects with
+Ruby on Rails and other diverse technologies: such as a desktop application with C++ to control UAVs, a pure back-end
+project with Spring, various hybrid mobile applications using Ionic, a customized e-commerce platform with PHP or an
+important telemedicine platform with PHP too.}
+\cventry{2017}{Internship Student}{nazaríes intelligenia}{Granada}{}{Internship corresponding to the M.Sc. in Computer
+Science I studied. I started learning and working with Ruby on Rails.}
+\cventry{2016-2017}{Scholarship Assistant}{Department of Lenguajes y Sistemas Informáticos}{Granada}{}{Working on an
+investigation project for studying and developing algorithms to view and document wood sculptures, and in the Atalaya3D
+project, processing 3D models to be uploaded to the web.}
 
 \section{Languages}
 \cvitemwithcomment{Spanish}{Native proficiency}{}
 \cvitemwithcomment{English}{Professional working proficiency}{B1 English Certificate. University of Cambridge}
 
-\clearpage
+\section{Awards}
+\cvitem{2022}{Professional Scrum Master\texttrademark\ I (PSM I) - scrum.org}
+\cvitem{2018}{Best academic results award - University of Granada - M.Sc. Computer Science}
 
 \section{Knowledge}
-\cvitem{Back-end web development}{Ruby on Rails, Django, PHP, MySQL, PostgreSQL, MongoDB, Sidekiq}
-\cvitem{Front-end web development}{Angular, Ionic, jQuery, HTML, CSS}
-\cvitem{DevOps}{Docker, AWS}
-\cvitem{Computer Graphics}{OpenGL, Blender, VTK, ITK, OpenCV}
+\cvitem{Back-end web development}{Ruby on Rails, PHP, MySQL, PostgreSQL}
+\cvitem{Front-end web development}{JavaScript, Angular, Ionic}
+\cvitem{Computer Graphics}{Blender, VTK, ITK, OpenCV}
 \cvitem{Artificial intelligence}{Neural Networks, Evolutionary Algorithms}
-\cvitem{Others}{Git, Scrum, UML, CUDA,  Qt, Photoshop}
+\cvitem{Others}{Docker, Git, Scrum, UML, Photoshop, \LaTeX}
 
 \section{Publications}
 \renewcommand{\refname}{Papers}
 \nocite{*}
 \bibliographystyle{plain}
 \bibliography{publications}
-
-\section{Miscellaneous}
-\cvlistitem{Driving License B}
 
 \end{document}
